@@ -8,7 +8,7 @@ st.set_page_config(page_title="Astra AI", page_icon="🤖")
 if "bot" not in st.session_state:
     try:
         st.session_state.bot = ChatBot()
-        st.session_state.bot_status = "Connected ✅"
+        st.session_state.bot_status = "Connected"
     except Exception as e:
         st.session_state.bot_status = f"Error: {e}"
 
@@ -21,7 +21,7 @@ with st.sidebar:
         st.rerun()
 
 # 4. Chat UI
-st.title("🤖 Astra Personal AI")
+st.title("🤖 Astra Friendly AI")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
